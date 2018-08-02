@@ -1,0 +1,167 @@
+<style type=text/css>
+
+.slider-holder
+{
+width: 800px;
+height: 400px;
+background-color: #000066;
+margin-left: auto;
+margin-right: auto;
+margin-top: 0px;
+text-align: center;
+overflow: hidden;
+}
+        
+.image-holder
+{
+width: 3200px;
+background-color: #b3b3ff;
+height: 300px;
+clear: both;
+position: relative;
+-webkit-transition: left 2s;
+-moz-transition: left 2s;
+-o-transition: left 2s;
+transition: left 2s;
+}
+     
+.duplicate
+{
+width: 800px;
+background-color: #001a57;
+height: 100px;
+clear: both;
+text-align: center;
+float:left;
+
+}	 
+
+.slider-image
+{
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+        }
+        
+        #slider-image-1:target ~ .image-holder
+        {
+            left: 0px;
+        }
+        
+        #slider-image-2:target ~ .image-holder
+        {
+            left: -800px;
+        }
+        
+        #slider-image-3:target ~ .image-holder
+        {
+            left: -1600px;
+        }
+		#slider-image-4:target ~ .image-holder
+        {
+            left: -2400px;
+        }
+        
+        .button-holder
+        {
+            position: relative;
+            top: -10px;
+			
+        }
+        
+        .slider-change
+        {
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            border-radius: 8px;
+            background-color: brown;
+        }
+		
+		</style>
+		
+		<script language="javascript" type="text/javascript">
+		
+		/* 
+		
+		(function(){
+        var imgLen = document.getElementById('image-holder');
+        var images = imgLen.getElementsByTagName('img');
+        var counter = 1;
+
+        if(counter <= images.length)
+		{
+            setInterval(function(){
+                images[0].src = images[counter].src;
+                console.log(images[counter].src);
+                counter++;
+
+                if(counter === images.length){
+                    counter = 1;
+                }
+            },4000);
+        }
+        })(); 
+
+        */
+
+         function slider1click()
+            {
+              document.getElementById('text-display1').innerHTML="INFORMATION";
+              document.getElementById('text-display2').innerHTML="Check out information about current commencement";
+              document.getElementById("duplicate1").href='<URL>';
+              document.getElementById("duplicate1").target='_blank';			  
+            }
+         function slider2click()
+            {
+              document.getElementById('text-display1').innerHTML="COMMENCEMENT HISTORY";
+              document.getElementById('text-display2').innerHTML="Read more about the evolution of UD's commencement history";
+              document.getElementById("duplicate1").href='<URL>';			  
+            }
+         function slider3click()
+            {
+              document.getElementById('text-display1').innerHTML="CONVOCATIONS";
+              document.getElementById('text-display2').innerHTML="Get full details about convocations for UD commencement 2016";
+              document.getElementById("duplicate1").href='<URL>';			  
+            }
+         function slider4click()
+            {
+              document.getElementById('text-display1').innerHTML="PARKING AND TRAVEL";
+              document.getElementById('text-display2').innerHTML="How to get to campus and all events";
+              document.getElementById("duplicate1").href='<URL>';			  
+            }			
+		</script>
+
+		<div class="slider-holder">
+        <span id="slider-image-1"></span>
+        <span id="slider-image-2"></span>
+        <span id="slider-image-3"></span>
+		<span id="slider-image-4"></span>
+        <div class="image-holder">
+            <a target="_parent" href="<URL>"><img src="<URL>" class="slider-image" /></a>
+            <a target="_parent" href="<URL>"><img src="<URL>" class="slider-image" /></a>
+            <a target="_parent" href="<URL>"><img src="<URL>" class="slider-image" /></a>
+			<a target="_parent" href="<URL>"><img src="<URL>" class="slider-image" /></a>
+        </div>
+        
+		
+        <div id="duplicate">
+		<a href="<URL>" id="duplicate1">
+		<p id="text-display1" style="font-size:22px; color:#FFD960; margin-top:10px; margin-left:Auto;">
+		INFORMATION
+        </p>
+        <p id="text-display2" style="font-size:18px; color:white; margin-top:-15px; margin-left:Auto;">	
+		Check out information about current commencement</p>	
+		</a>
+		</div>
+		<div class="button-holder">
+            <a href="#slider-image-1" onclick="javascript:slider1click()" class="slider-change"></a>
+            <a href="#slider-image-2" onclick="javascript:slider2click()" class="slider-change"></a>
+            <a href="#slider-image-3" onclick="javascript:slider3click()" class="slider-change"></a>
+			<a href="#slider-image-4" onclick="javascript:slider4click()" class="slider-change"></a>
+        </div>
+		</div>
+		
+		
+	
